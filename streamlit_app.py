@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 
 # Load the model and DataFrame
-pipe = pickle.load(open('pipe.pkl','rb'))
+pipe = pickle.load(open('model.pkl','rb'))
 df = pickle.load(open('df.pkl','rb'))
 
 # One-hot encode categorical variables
