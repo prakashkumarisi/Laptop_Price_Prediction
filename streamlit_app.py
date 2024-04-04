@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 import numpy as np
 pipe = pickle.load(open('model.pkl','rb'))
-df = pd.read_csv('laptop_data.csv')
+df = pd.read_csv('clean_data.csv')
 st.title('Laptop Price Predictor')
 st.write("Made by Prakash Kumar")
 
