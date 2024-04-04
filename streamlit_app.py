@@ -11,7 +11,7 @@ st.write("Made by Prakash Kumar")
 brand = st.selectbox('Brand',df['Company'].unique())
 
 # type of laptop
-type = st.selectbox('Type',df['TypeName'].unique())
+typ = st.selectbox('Type',df['TypeName'].unique())
 
 #Ram
 ram = st.selectbox('Ram',sorted(list(df['Ram'].unique())))
@@ -62,7 +62,7 @@ if st.button('Predict Price'):
     x_resolution = int(resolution.split('x')[0])**2
     y_resolution = int(resolution.split('x')[1])**2
     ppi = (x_resolution+y_resolution)**0.5/inch
-    query = np.array([brand,type,cpu,ram,gpu,os,weigth,touchscreen,ips,ppi,speed,hdd,ssd])
+    query = np.array([brand,typ,cpu,ram,gpu,os,weigth,touchscreen,ips,ppi,speed,hdd,ssd])
     query=query.reshape(1,13)
     prediction =pipe.predict(query)
     st.title(f'Price For Laptop Will Be Rs. {np.round(np.exp(prediction[0]),0)}')
